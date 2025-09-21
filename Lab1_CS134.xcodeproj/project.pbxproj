@@ -7,8 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		"0C0AB87A-3725-4DC5-8BBF-D6FCA3423811" /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "85186564-91A6-41F0-B4AE-887B3EB28174" /* ofxSlider.cpp */; };
+		"30D0733D-06E1-4F36-9F65-95DA2291B912" /* ofxInputField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "47F04D42-8DB8-422D-AF5D-0A8EB25A5A24" /* ofxInputField.cpp */; };
+		"59608B05-8C41-4526-8289-A83AAA926B8C" /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "D25F0B43-C338-415F-9E3D-2C02DDB5A4C0" /* ofxLabel.cpp */; };
+		"838B325C-6792-498B-86BA-82A1EACAFB72" /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "4EB0A34F-42D4-4C80-BB20-7A04720D9535" /* ofxButton.cpp */; };
+		"CD7CA07D-CEF9-48E3-ACEE-25D930FE0806" /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "1A10AC49-CDBF-4EA9-8384-387348299FA1" /* ofxSliderGroup.cpp */; };
+		"D40E1ED6-5105-4AC9-AE55-F366C4B33CB3" /* ofxPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "8FBD34CB-08F0-4E55-9476-FA8449293892" /* ofxPanel.cpp */; };
+		"D82FBCFB-CEBB-40CE-841D-7878EEBFE62F" /* ofxColorPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "107645E2-A219-4044-A2D3-2B6B2C847786" /* ofxColorPicker.cpp */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+		"EBE946AE-B6A7-4CDE-99F3-561D384D8A55" /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "693D9F29-95E6-4A32-9A87-94D7C80B5E11" /* ofxGuiGroup.cpp */; };
+		"F85E38E6-76B8-47D6-8C77-F5BCAB7E4EEC" /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "51A64AC4-7F30-430D-8A37-991AEF41B8C8" /* ofxToggle.cpp */; };
+		"FFCF7CCF-FEE9-430A-AACE-3F2D92641BC6" /* ofxBaseGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "B8287E68-780D-4DB7-8FCE-77612E95C521" /* ofxBaseGui.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,16 +43,38 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		"082E506A-430D-4100-B296-43A2B672AA41" /* ofxGuiUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ofxGuiUtils.h; sourceTree = "<group>"; };
+		"0A69A26C-0CB9-4ACA-BBB3-E848A429403C" /* data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = data; path = bin/data; sourceTree = SOURCE_ROOT; };
+		"107645E2-A219-4044-A2D3-2B6B2C847786" /* ofxColorPicker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxColorPicker.cpp; sourceTree = "<group>"; };
 		191CD6FA2847E21E0085CBB6 /* of.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = of.entitlements; sourceTree = "<group>"; };
 		191EF70929D778A400F35F26 /* openFrameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = openFrameworks; path = ../../../libs/openFrameworks; sourceTree = SOURCE_ROOT; };
-		"1EB2CD32-ED8E-4D9C-BDAE-E44E260657E8" /* data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = data; path = bin/data; sourceTree = SOURCE_ROOT; };
-		D2C401182E7F796B006A7E24 /* Shapes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shapes.h; sourceTree = "<group>"; };
+		"1A10AC49-CDBF-4EA9-8384-387348299FA1" /* ofxSliderGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxSliderGroup.cpp; sourceTree = "<group>"; };
+		"1F20688D-1D07-441B-8EEF-CDD5C3C37C27" /* ofxGuiGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ofxGuiGroup.h; sourceTree = "<group>"; };
+		"3DA0DEEE-FA08-46F9-9A20-B8973F31D112" /* ofxGui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ofxGui.h; sourceTree = "<group>"; };
+		"47F04D42-8DB8-422D-AF5D-0A8EB25A5A24" /* ofxInputField.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxInputField.cpp; sourceTree = "<group>"; };
+		"4EB0A34F-42D4-4C80-BB20-7A04720D9535" /* ofxButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxButton.cpp; sourceTree = "<group>"; };
+		"51A64AC4-7F30-430D-8A37-991AEF41B8C8" /* ofxToggle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxToggle.cpp; sourceTree = "<group>"; };
+		"693D9F29-95E6-4A32-9A87-94D7C80B5E11" /* ofxGuiGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxGuiGroup.cpp; sourceTree = "<group>"; };
+		"6BC83F6A-ECFB-48D8-9702-354D92806091" /* ofxToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ofxToggle.h; sourceTree = "<group>"; };
+		"85186564-91A6-41F0-B4AE-887B3EB28174" /* ofxSlider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxSlider.cpp; sourceTree = "<group>"; };
+		"8FBD34CB-08F0-4E55-9476-FA8449293892" /* ofxPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxPanel.cpp; sourceTree = "<group>"; };
+		"8FE873ED-BC53-4933-B72A-4D7413FA79A6" /* ofxButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ofxButton.h; sourceTree = "<group>"; };
+		"B8287E68-780D-4DB7-8FCE-77612E95C521" /* ofxBaseGui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxBaseGui.cpp; sourceTree = "<group>"; };
+		"BA963F83-BB52-4922-B815-F7D6BCD2DB67" /* ofxSliderGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ofxSliderGroup.h; sourceTree = "<group>"; };
+		"BE5F3F4A-572B-44E7-9C8F-161D9546D1E9" /* ofxInputField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ofxInputField.h; sourceTree = "<group>"; };
+		"D25F0B43-C338-415F-9E3D-2C02DDB5A4C0" /* ofxLabel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLabel.cpp; sourceTree = "<group>"; };
+		"D8D7A52A-7499-407F-848F-CA8EB025BADE" /* ofxPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ofxPanel.h; sourceTree = "<group>"; };
+		"E3BE09BA-9AF4-4144-B817-68AEC516D18B" /* Shapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shapes.h; sourceTree = "<group>"; };
 		E4B69B5B0A3A1756003C02F2 /* Lab1_CS134Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab1_CS134Debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
 		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		"E5358DBE-2038-42F0-8693-EE9B63E07514" /* ofxLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ofxLabel.h; sourceTree = "<group>"; };
+		"EB9420B5-B4AE-4E77-8F84-B10252DC21D8" /* ofxColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ofxColorPicker.h; sourceTree = "<group>"; };
+		"F5D9D3F4-B3D2-4EA1-8DFF-10165924B973" /* ofxSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ofxSlider.h; sourceTree = "<group>"; };
+		"F9A40501-5B2D-48DB-9641-8C4E2A93F3D9" /* ofxBaseGui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ofxBaseGui.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +88,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		"529C1AC4-B520-4C64-A30E-18C9180082A2" /* src */ = {
+			isa = PBXGroup;
+			children = (
+				"B8287E68-780D-4DB7-8FCE-77612E95C521" /* ofxBaseGui.cpp */,
+				"F9A40501-5B2D-48DB-9641-8C4E2A93F3D9" /* ofxBaseGui.h */,
+				"4EB0A34F-42D4-4C80-BB20-7A04720D9535" /* ofxButton.cpp */,
+				"8FE873ED-BC53-4933-B72A-4D7413FA79A6" /* ofxButton.h */,
+				"107645E2-A219-4044-A2D3-2B6B2C847786" /* ofxColorPicker.cpp */,
+				"EB9420B5-B4AE-4E77-8F84-B10252DC21D8" /* ofxColorPicker.h */,
+				"3DA0DEEE-FA08-46F9-9A20-B8973F31D112" /* ofxGui.h */,
+				"693D9F29-95E6-4A32-9A87-94D7C80B5E11" /* ofxGuiGroup.cpp */,
+				"1F20688D-1D07-441B-8EEF-CDD5C3C37C27" /* ofxGuiGroup.h */,
+				"082E506A-430D-4100-B296-43A2B672AA41" /* ofxGuiUtils.h */,
+				"47F04D42-8DB8-422D-AF5D-0A8EB25A5A24" /* ofxInputField.cpp */,
+				"BE5F3F4A-572B-44E7-9C8F-161D9546D1E9" /* ofxInputField.h */,
+				"D25F0B43-C338-415F-9E3D-2C02DDB5A4C0" /* ofxLabel.cpp */,
+				"E5358DBE-2038-42F0-8693-EE9B63E07514" /* ofxLabel.h */,
+				"8FBD34CB-08F0-4E55-9476-FA8449293892" /* ofxPanel.cpp */,
+				"D8D7A52A-7499-407F-848F-CA8EB025BADE" /* ofxPanel.h */,
+				"85186564-91A6-41F0-B4AE-887B3EB28174" /* ofxSlider.cpp */,
+				"F5D9D3F4-B3D2-4EA1-8DFF-10165924B973" /* ofxSlider.h */,
+				"1A10AC49-CDBF-4EA9-8384-387348299FA1" /* ofxSliderGroup.cpp */,
+				"BA963F83-BB52-4922-B815-F7D6BCD2DB67" /* ofxSliderGroup.h */,
+				"51A64AC4-7F30-430D-8A37-991AEF41B8C8" /* ofxToggle.cpp */,
+				"6BC83F6A-ECFB-48D8-9702-354D92806091" /* ofxToggle.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		"83245842-1D05-41A2-8D2D-F34E398168A6" /* ofxGui */ = {
+			isa = PBXGroup;
+			children = (
+				"529C1AC4-B520-4C64-A30E-18C9180082A2" /* src */,
+			);
+			path = ofxGui;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				"83245842-1D05-41A2-8D2D-F34E398168A6" /* ofxGui */,
 			);
 			name = addons;
 			path = ../../../addons;
@@ -74,17 +144,17 @@
 				191EF70929D778A400F35F26 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				E4B69B5B0A3A1756003C02F2 /* Lab1_CS134Debug.app */,
-				"1EB2CD32-ED8E-4D9C-BDAE-E44E260657E8" /* data */,
+				"0A69A26C-0CB9-4ACA-BBB3-E848A429403C" /* data */,
 			);
 			sourceTree = "<group>";
 		};
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				D2C401182E7F796B006A7E24 /* Shapes.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				"E3BE09BA-9AF4-4144-B817-68AEC516D18B" /* Shapes.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -184,6 +254,16 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				"FFCF7CCF-FEE9-430A-AACE-3F2D92641BC6" /* ofxBaseGui.cpp in Sources */,
+				"838B325C-6792-498B-86BA-82A1EACAFB72" /* ofxButton.cpp in Sources */,
+				"D82FBCFB-CEBB-40CE-841D-7878EEBFE62F" /* ofxColorPicker.cpp in Sources */,
+				"EBE946AE-B6A7-4CDE-99F3-561D384D8A55" /* ofxGuiGroup.cpp in Sources */,
+				"30D0733D-06E1-4F36-9F65-95DA2291B912" /* ofxInputField.cpp in Sources */,
+				"59608B05-8C41-4526-8289-A83AAA926B8C" /* ofxLabel.cpp in Sources */,
+				"D40E1ED6-5105-4AC9-AE55-F366C4B33CB3" /* ofxPanel.cpp in Sources */,
+				"0C0AB87A-3725-4DC5-8BBF-D6FCA3423811" /* ofxSlider.cpp in Sources */,
+				"CD7CA07D-CEF9-48E3-ACEE-25D930FE0806" /* ofxSliderGroup.cpp in Sources */,
+				"F85E38E6-76B8-47D6-8C77-F5BCAB7E4EEC" /* ofxToggle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +314,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
+					src,
+					../../../addons/ofxGui/src,
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -254,6 +336,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
+					src,
+					../../../addons/ofxGui/src,
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (

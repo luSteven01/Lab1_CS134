@@ -11,6 +11,7 @@ public:
 	glm::vec3 position = glm::vec3(0,0,0);
 	float rotation = 0.0; // degrees
 	glm::vec3 scale = glm::vec3(1.0, 1.0, 1.0);
+	bool isSelected = false;
 
 	glm::mat4 getTransform() {
 		glm::mat4 T = glm::translate(glm::mat4(1.0), position);
@@ -44,10 +45,10 @@ public:
 
 class TriangleShape: public Shape {
 public:
-	glm::vec3 triPoint1 = glm::vec3(20,0,0); // right corner
-	glm::vec3 triPoint2 = glm::vec3(-20,-20,0); // botton left corner
-	glm::vec3 triPoint3 = glm::vec3(-20,20,0); // top left corner
-	
+	glm::vec3 triPoint1 = glm::vec3(0,-50,0); // top corner
+	glm::vec3 triPoint2 = glm::vec3(-43.3,25,0); // bottom left corner
+	glm::vec3 triPoint3 = glm::vec3(43.3,25,0); // bottom right corner
+	bool isSelected = false;
 	void draw() {
 		ofPushMatrix();
 		ofMultMatrix(getTransform());
@@ -66,7 +67,7 @@ public:
 		};
 
 		float mainArea = area(triPoint1, triPoint2, triPoint3);
-
+		
 		float Area1 = area(p1, triPoint2, triPoint3);
 		float Area2 = area(triPoint1, p1, triPoint3);
 		float Area3 = area(triPoint1, triPoint2, p1);
@@ -80,18 +81,24 @@ public:
 	ImageShape() {};
 	ImageShape( ofImage image) { this->image = image; }
 	void setImage(ofImage image) {this->image = image;}
-
+	bool isSelected = false;
+	
+	
 	void draw() {
-		ofPushMatrix();   // store current state of transform matrix
-		ofMultMatrix(getTransform()); // calculate new matrix
+		ofPushMatrix();
+		ofMultMatrix(getTransform());
 		ofSetColor(ofColor::white);
-		image.draw(glm::vec3(-image.getWidth()/2.0,-image.getHeight()/2.0, 0));
+		image.draw(glm::vec3(-image.getWidth() / 2.0, -image.getHeight() / 2.0, 0));
 		ofPopMatrix();
 	}
 	
-//	bool inside(glm::vec3 p) {
-//		
-//	}
+	bool inside(glm::vec3 p) {
+		glm::vec4 p1 = glm::inverse(getTransform()) * glm::vec4(p, 1.0);
+
+		float imgWidth = image.getWidth();
+		float imgHeight = image.getHeight();
+		return (p1.x > -(imgWidth/2.0) && p1.x < (imgWidth/2.0) && p1.y > (-imgHeight/2.0) && p1.y < (imgHeight/2.0));
+	}
 
 	ofImage image;
 };
