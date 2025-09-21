@@ -2,6 +2,8 @@
 
 #include "ofMain.h"
 
+#include "Shapes.h"
+
 class ofApp : public ofBaseApp{
 
 	public:
@@ -23,4 +25,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo) override;
 		void gotMessage(ofMessage msg) override;
 		
+		CircleShape circle;
+		ImageShape imageShape;
+		TriangleShape triangleShape;
 };
