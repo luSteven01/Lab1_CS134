@@ -31,6 +31,7 @@ public:
 	ImageShape image;
 	TriangleShape triangle;
 	Shape* shape;
+	glm::vec3 target;
 	
 	ofxPanel gui;
 	ofxToggle setHeading;
@@ -43,5 +44,6 @@ public:
 	bool isUp = false;
 	bool isDown = false;
 	
-	bool bHideHeading;
+	bool isRotating = false;
+	bool CmdOrControl = false; 
 };

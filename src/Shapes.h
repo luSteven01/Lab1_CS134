@@ -26,21 +26,19 @@ class CircleShape: public Shape {
 public:
 
 	CircleShape() {}
-	void draw() {
+	void draw() override {
 		ofPushMatrix();   // store current state of transform matrix
 		ofMultMatrix(getTransform()); // calculate new matrix
 		ofSetCircleResolution(500);
 		ofSetColor(ofColor::orangeRed);
 		ofDrawCircle(glm::vec3(0,0,0), radius);
-		ofSetColor(ofColor::white);
-		ofDrawLine(glm::vec3(0,0,0), glm::vec3(radius,0,0));
 		ofPopMatrix();
 	}
-	bool inside(glm::vec3 p) {
+	bool inside(glm::vec3 p) override {
 		glm::vec3 p1 = glm::inverse(getTransform()) * glm::vec4(p, 1);
 		return ( glm::distance(p1, glm::vec3(0,0,0)) < radius);
 	}
-	float radius = 20.0;
+	float radius = 5.0;
 };
 
 class TriangleShape: public Shape {

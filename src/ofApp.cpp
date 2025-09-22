@@ -2,12 +2,11 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	//circle.scale.x += 4.0;
 	gui.setup();
 	gui.add(setHeading.setup("Draw Heading", true));
 	gui.add(setImage.setup("Use Image", false));
-    gui.add(imgScale.setup("Triangle Scale", 50, 10, 200));
-	gui.add(imgScale.setup("Image Scale", 50, 10, 200));
+    gui.add(triScale.setup("Triangle Scale", 1.0, 0, 10.0));
+	gui.add(imgScale.setup("Image Scale", 1.0, 0, 10.0));
 
 	
 	// Load Image Shape
@@ -25,6 +24,14 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 	Shape *otherShape = shape;
+	
+	if (shape == &triangle) {
+		float getTriScale = triScale;
+		shape -> scale = glm::vec3(getTriScale, getTriScale, 1.0);
+	} else if (shape == &image) {
+		float getImgScale = imgScale;
+		shape -> scale = glm::vec3(getImgScale, getImgScale, 1.0);
+	}
 	
 	// Switch between the image and triangle shape
 	if (setImage) {
@@ -74,12 +81,28 @@ void ofApp::update(){
 		shape -> position.x -= t * cos(d);
 		shape -> position.y -= t * sin(d);
 	}
+	
+	if (isRotating) {
+		glm::vec3 direction = target - shape->position;
+		float targetAngle = glm::degrees(atan2(direction.y, direction.x));
+
+		float diff = targetAngle - shape->rotation + 90;
+
+		// take shortest distance to dot
+		while (diff < -180) diff += 360;
+		while (diff > 180) diff -= 360;
+		
+		shape->rotation += diff * 0.25;
+
+		if (abs(diff) < 0.1) {
+			isRotating = false;
+		}
+	}
 
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	//imageShape.draw();
 	
 	shape -> draw();
 	if (setHeading) {
@@ -91,12 +114,14 @@ void ofApp::draw(){
 	}
 	gui.draw();
 	
-
+	if (isRotating) {
+		circle.draw();
+	}
 }
 
 //--------------------------------------------------------------
 void ofApp::exit(){
-
+	
 }
 
 //--------------------------------------------------------------
@@ -114,6 +139,9 @@ void ofApp::keyPressed(int key){
 	if (key == OF_KEY_DOWN) {
 		isDown = true;
 		cout << "Down " << isDown << endl;
+	}
+	if (key == OF_KEY_COMMAND || key == OF_KEY_CONTROL) {
+		CmdOrControl= true;
 	}
 }
 
@@ -133,6 +161,10 @@ void ofApp::keyReleased(int key){
 		isDown = false;
 		cout << "Down " << isDown << endl;
 	}
+	if (key == OF_KEY_COMMAND || key == OF_KEY_CONTROL) {
+		CmdOrControl = false;
+	}
+	
 }
 
 //--------------------------------------------------------------
@@ -156,12 +188,20 @@ void ofApp::mousePressed(int x, int y, int button){
 		shape -> isSelected = true;
 	} else {
 		shape -> isSelected = false;
+		if (CmdOrControl) {
+			isRotating = true;
+			circle.position = glm::vec3(x,y,0);
+			target = glm::vec3(x,y,0);
+			cout << "New circle position " << circle.position << endl;
+		}
 	}
+	
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-
+	
 }
 
 //--------------------------------------------------------------
